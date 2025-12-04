@@ -43,8 +43,8 @@ specifically, the **KOSPI** index — and evaluate:
 proj4-2/
 ├── data/
 │   ├── 뉴스심리지수.xlsx                 # BOK Snapshot에서 수동 다운로드한 NSI
-│   ├── kospi_df.csv                      # 수집 + feature engineering된 KOSPI 원본 데이터
-│   └── kospi_yahoo_AB_full_feature.csv   # 최종 모델 학습용 full feature set
+│   ├── kospi_df.csv                      # 두 데이터를 머지하고 feature engineering된 KOSPI 데이터
+│   └── kospi_yahoo_AB_full_feature.csv # 수집한 원본 데이터
 │
 ├── src/
 │   ├── 01_data_preprocessing.ipynb       # 데이터 로딩, 정제, NSI merge, feature 생성
