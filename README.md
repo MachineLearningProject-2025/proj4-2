@@ -33,7 +33,7 @@ specifically, the **KOSPI** index — and evaluate:
 > `market_forward_excess_returns` — next-day excess return relative to a 5-year rolling mean  
 
 **Allocation rule:**  
-> \( w_t = \text{clip}(1 + k z_t,\ 0,\ 2) \) with volatility ≤ 1.2× benchmark  
+> w_t = clip(1 + k*z_t, 0, 2) with volatility ≤ 1.2× benchmark  
 
 ---
 
@@ -57,7 +57,7 @@ proj4-2/
 
 ---
 
-# 3. Dataset Card (Bonus Deliverable 1)
+# 3. Dataset Card
 
 ### **Data Components**
 
@@ -69,7 +69,7 @@ proj4-2/
 | Volatility / Risk    | vol_22d, ATR, Bollinger Bands, RSI         | Derived                         | Reflects uncertainty        |
 | Drawdowns            | drawdown_60, max_drawdown_60               | Derived                         | Downside risk behavior      |
 | External Indicators  | VIX, USD/KRW, Gold price                   | Yahoo Finance                   | Global risk signals         |
-| News Sentiment Index | NSI                                        | **BOK Snapshot Excel download** | Added manually, not API     |
+| News Sentiment Index | NSI                                        | **BOK Snapshot Excel download** | Added manually    |
 
 ### **Collection Notes**
 
@@ -80,7 +80,7 @@ proj4-2/
 
 ---
 
-# 4. Modeling Pipeline (Bonus Deliverable 2)
+# 4. Modeling Pipeline
 
 ### ✔ PCA (Dim = 5)
 
@@ -109,7 +109,7 @@ scale if volatility exceeds 1.2× benchmark
 
 ---
 
-# 5. Results Summary (Bonus Deliverable 3 – Appendix Figures)
+# 5. Results Summary
 
 ### **Test Out-of-Sample (OOS) Results**
 
@@ -160,11 +160,17 @@ All notebooks produce reproducible outputs using only files inside `data/`.
 # 7. Compliance with Course Requirements
 
 ✔ Dataset card (included above)
+
 ✔ Reproducible source code (in `src/`)
+
 ✔ Figures & results for Appendix (generated in notebook 03)
+
 ✔ Volatility-constrained strategy
+
 ✔ EMH interpretation & qualitative discussion
+
 ✔ No external API requiring credentials
+
 ✔ No leakage in modeling (verified via PCA per-fold training)
 
 ---
